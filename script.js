@@ -60,7 +60,13 @@ function showGroups() {
   app.innerHTML = `
     <div class="container">
       <h2>Your Groups</h2>
-      ${userGroups.map(g => `<div><b>${g.name}</b> <button onclick="buzz('${g.name}')">Buzz All</button> <button onclick="editGroup('${g.name}')">Edit</button></div>`).join('')}
+      ${userGroups.map(g => `
+        <div>
+          <b>${g.name}</b> 
+          <button onclick="buzz('${g.name}')">Buzz All</button> 
+          <button onclick="editGroup('${g.name}')">Edit</button>
+        </div>
+      `).join('')}
       <button onclick="createGroup()">Create New Group</button>
     </div>
   `;
